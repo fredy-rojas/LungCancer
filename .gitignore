@@ -4,6 +4,10 @@ data/
 notebook/01_shared_by_sam
 results/
 
+#=====================================
+# Ignore folder generate inside of container
+.Trash-0/
+
 #====================================
 # Byte-compiled / optimized / DLL files
 __pycache__/
