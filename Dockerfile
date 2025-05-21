@@ -10,13 +10,17 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* && \
     pip install jupyterlab==4.4.2
 
+# Set up library for openCV 
+RUN apt update && apt install -y libgl1 libglib2.0-0 && apt clean
+
 # Set working directory
 WORKDIR /workspace
 
 # Copy your requirements.txt into the container
 COPY requirements.txt .
 # Install Python packages from requirements.txt
-RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt \
+    --extra-index-url https://download.pytorch.org/whl/cu118
 
 
 CMD ["jupyter", "lab", "--ip=0.0.0.0", "--allow-root", "--NotebookApp.token='fredy_rojas'",  "--no-browser", "--port=8888"]
