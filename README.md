@@ -4,7 +4,7 @@ ____________________________________________________
 You need Docker desktop in your local machine 
 - Clone this git repository
 - in the same root where docker-compose.yml and dockerfile live run
-  - `~docker compose up`
+  - `~ docker compose --compatibility up`
     - This will active your docker container and jupyterlab in your terminal 
 - To open jupyterlab, choose your browser 
   - copy past this in your browser `http://localhost:8000/lab`
