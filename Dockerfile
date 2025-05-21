@@ -20,7 +20,7 @@ WORKDIR /workspace
 COPY requirements.txt .
 # Install Python packages from requirements.txt
 RUN pip install -r requirements.txt \
-    --extra-index-url https://download.pytorch.org/whl/cu118
+    --extra-index-url https://download.pytorch.org/whl/cu117
 
 
 CMD ["jupyter", "lab", "--ip=0.0.0.0", "--allow-root", "--NotebookApp.token='fredy_rojas'",  "--no-browser", "--port=8888"]
