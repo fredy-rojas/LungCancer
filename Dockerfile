@@ -13,6 +13,9 @@ RUN apt-get update && \
 # Set up library for openCV 
 RUN apt update && apt install -y libgl1 libglib2.0-0 && apt clean
 
+# set up library for torchview
+RUN apt install -y graphviz
+
 # Set working directory
 WORKDIR /workspace
 
